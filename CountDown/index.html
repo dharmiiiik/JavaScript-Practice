@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 100vh;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            /* border: 2px solid red; */
+
+        }
+
+        .image-wrapper img {
+            width: 50%;
+            height: 50%;
+            object-fit: cover;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid white; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="image-wrapper"  >
+          <div id="image">
+            
+          </div>
+        </div>
+        <h1 id="count"></h1>
+    </div>
+    <script>
+        let count = 5;
+        const counter = document.getElementById('count');
+        const image = document.getElementById('image');
+const img=document.createElement("img")
+        let main = document.querySelector(".main")
+        const id = setInterval(() => {
+            counter.innerText = count;
+            counter.style.color = 'black';
+            if (count == 0) {
+                clearInterval(id);
+                counter.innerText = "WAKANDA FOREVER"
+                img.src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/nslnf1qoq8he5stoaz4d.jpg"
+                image.append(img);
+                counter.style.color = "purple";
+                main.style.background = "black";
+            }
+            count--
+        }, 1000)
+
+        function showWinner() {
+            arr[count];
+            img.src = arr[count].image;
+            slide1.innerText = arr[count].slide1;
+        }
+
+    </script>
+</body>
+
+</html>
